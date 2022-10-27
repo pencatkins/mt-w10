@@ -1,5 +1,6 @@
 import React from "react";
 import { useState} from "react";
+import Head from "next/head";
 import {
     Box,
     Button,
@@ -62,18 +63,16 @@ const TodoItem = ({itemData, docNo}) => {
     // user is logged in, return jsx compoment
     return (
         <Center width={"100vw"} mt={10}>
+        <Head><title>To Do Item Detail</title></Head>
         <Box 
         p={5}
-        bg="#599cf3" 
-        color="black"
         rounded="lg" 
         boxShadow="2xl"
         shadow={"dark-lg"}
         transition="0.2s"
-        _hover={{ bg: '#1566d1' }}
         key={itemData.id}
         >
-
+            <Text rounded="md" py={2} bg="#599cf3" textAlign="center" ml={2} mb={2} fontWeight="bold">Edit To Do Below</Text>
             <Text ml={2} mb={2} fontWeight="bold">Title</Text>
             <Input
             type="text"

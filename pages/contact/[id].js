@@ -1,5 +1,6 @@
 import React from "react";
 import { useState} from "react";
+import Head from "next/head";
 import {
     Box,
     Button,
@@ -63,18 +64,16 @@ const ContactItem = ({itemData, docNo}) => {
     // user is logged in, return jsx compoment
     return (
         <Center width={"100vw"} mt={10}>
+        <Head><title>Contact Item Detail</title></Head>
         <Box 
-        p={5}
-        bg="#599cf3" 
-        color="black"
+        p={5} 
         rounded="lg" 
         boxShadow="2xl"
         shadow={"dark-lg"}
         transition="0.2s"
-        _hover={{ bg: '#1566d1' }}
         key={itemData.id}
         >
-
+            <Text textAlign="center" rounded="md" bg="#0c4b9d" color="white" py={2} ml={2} mb={2} fontWeight="bold">Edit Contact Below</Text>
             <Text ml={2} mb={2} fontWeight="bold">Name</Text>
             <Input
             type="text"

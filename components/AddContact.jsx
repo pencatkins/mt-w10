@@ -5,6 +5,7 @@ import {
     Input,
     Button,
     Textarea,
+    Text,
     Stack,
     Select,
     useToast
@@ -59,6 +60,12 @@ const AddContact = () => {
     return (
     <Box w="40%" margin={"0 auto"} display="block" mt={5}>
         <Stack direction="column">
+        <Text 
+            textAlign="center" py={2} 
+            fontWeight="bold" 
+            bg="#0b4a9d" 
+            color="white" 
+            rounded="md">Add A Contact Item Below</Text>
             <Input
             placeholder="Name"
             value={name}

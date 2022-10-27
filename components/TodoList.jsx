@@ -7,14 +7,6 @@ import {
     SimpleGrid,
     Text,
     useToast,
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
-    useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import React, { useEffect } from "react";
@@ -72,11 +64,9 @@ const TodoList = () => {
         });
     };
 
-    const { isOpen, onOpen, onClose } = useDisclosure();
-
     return (
-        <Box mt={5} pb={5}> 
-           {user && (<Heading as="h1" fontSize="xl" color="white" bg="#599cf3" textAlign="center" py={5}>TO DOs</Heading>)}
+        <Box mt={5} pb={5}>
+           {user && (<Heading as="h2" fontSize="xl" color="white" bg="#599cf3" textAlign="center" py={5}>TO DOs</Heading>)}
            {user && (<SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} p={10} bg="#599cf3">
             {todos &&
             todos.map((todo) => (

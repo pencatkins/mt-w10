@@ -5,6 +5,7 @@ import {
     Input,
     Button,
     Textarea,
+    Text,
     Stack,
     Select,
     useToast
@@ -56,6 +57,12 @@ const AddTodo = () => {
     return (
     <Box w="40%" margin={"0 auto"} display="block" mt={5}>
         <Stack direction="column">
+            <Text 
+            textAlign="center" py={2} 
+            fontWeight="bold" 
+            bg="#599cf3" 
+            color="white" 
+            rounded="md">Add A To Do Item Below</Text>
             <Input
             placeholder="Title"
             value={title}
@@ -81,7 +88,7 @@ const AddTodo = () => {
             <Button 
             onClick={() => handleTodoCreate()}
             disabled={title.length < 1 || description.length < 1 || isLoading} 
-            colorScheme="teal"
+            colorScheme="blue"
             variant="solid">Add
             </Button>
         </Stack>

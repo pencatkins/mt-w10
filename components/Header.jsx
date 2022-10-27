@@ -5,6 +5,7 @@ import { auth } from "../firebase";
 import useAuth from "../hooks/useAuth";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { FaGoogle, FaMoon, FaSun, FaSignOutAlt, FaSkyatlas } from "react-icons/fa";
+import { FcSportsMode } from "react-icons/fc";
 import {
     Box,
     Flex,
@@ -74,7 +75,7 @@ import {
           <Flex
             flex={{ base: 1, md: "auto" }}
             ml={{ base: -2 }}
-            display={{ base: "flex", md: "none" }}
+            display={{ base: "flex", lg: "none" }}
           >
             <IconButton
               onClick={onToggle}
@@ -92,11 +93,11 @@ import {
               color={useColorModeValue("gray.800", "white")}
             >
               <Link href="/">
-              <FaSkyatlas fontSize='2.5em' color={'pink.700'}/>
+              <FcSportsMode fontSize='2.5em'/>
               </Link>
             </Text>
   
-            <Flex display={{ base: "none", md: "flex" }} mt={2} ml={10}>
+            <Flex display={{ base: "none", md: "none", lg:"flex"}} mt={2} ml={10}>
               <DesktopNav />
             </Flex>
 
@@ -236,7 +237,7 @@ import {
       <Stack
         bg={useColorModeValue("white", "gray.800")}
         p={4}
-        display={{ md: "none" }}
+        display={{ lg: "none" }}
       >
         {NAV_ITEMS.map(navItem => (
           <MobileNavItem key={navItem.label} {...navItem} />

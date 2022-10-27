@@ -5,6 +5,11 @@ import {
     SimpleGrid,
     Text,
     useToast,
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    AccordionPanel,
+    AccordionIcon,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import useAuth from "../hooks/useAuth";
@@ -101,6 +106,25 @@ const ContactList = () => {
 
                     </Heading>
                     <Text color="gray.300">{contact.phone}</Text>
+
+                    <Box>
+                        <Accordion allowToggle>
+                            <AccordionItem>
+                                <h2>
+                                <AccordionButton>
+                                    <Box flex='1' textAlign='left' color="white">
+                                    Details
+                                    </Box>
+                                    <AccordionIcon />
+                                </AccordionButton>
+                                </h2>
+                                <AccordionPanel pb={4}>
+                                <Text color="white">{contact.email}</Text>
+                                <Text color="white">{contact.address}</Text>
+                                </AccordionPanel>
+                            </AccordionItem>
+                        </Accordion>
+                        </Box>
 
                     </Box>
                     ))}

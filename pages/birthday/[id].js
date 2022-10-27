@@ -1,5 +1,6 @@
 import React from "react";
 import { useState} from "react";
+import Head from "next/head";
 import {
     Box,
     Button,
@@ -64,18 +65,16 @@ const BirthdayItem = ({itemData, docNo}) => {
     // user is logged in, return jsx compoment
     return (
         <Center width={"100vw"} mt={10}>
+        <Head><title>Birthday Item Detail</title></Head>
         <Box 
         p={5}
-        bg="#599cf3" 
-        color="black"
         rounded="lg" 
         boxShadow="2xl"
         shadow={"dark-lg"}
         transition="0.2s"
-        _hover={{ bg: '#1566d1' }}
         key={itemData.id}
         >
-
+<Text rounded="md" py={2} bg="#599cf3" textAlign="center" ml={2} mb={2} fontWeight="bold">Edit Birthday Item Below</Text>
             <Text ml={2} mb={2} fontWeight="bold">Person</Text>
             <Input
             type="text"
@@ -108,8 +107,8 @@ const BirthdayItem = ({itemData, docNo}) => {
            
             <Text ml={2} mb={2} fontWeight="bold">Status</Text>  
             <Select placeholder={statusName} rounded={0} size='sm' mb={4} onChange={(e) => setStatusName(e.target.value)}>
-                <option value="pending">card not sent</option>
-                <option value="completed" >card sent</option>
+                <option value="card not sent">card not sent</option>
+                <option value="card sent" >card sent</option>
             </Select>
 
             <Text ml={2} mb={2} fontWeight="bold">Created on</Text>
