@@ -92,7 +92,7 @@ import {
               fontFamily={"heading"}
               color={useColorModeValue("gray.800", "white")}
             >
-              <Link href="/">
+              <Link href="https://mt-w10.vercel.app/">
               <FcSportsMode fontSize='2.5em'/>
               </Link>
             </Text>
@@ -111,7 +111,14 @@ import {
             mr={20}
           >
 
-            <Button ml={10} onClick={() => toggleColorMode()} >
+            <Button 
+            ml={10} 
+            _focus={{
+              boxShadow:
+                '0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)',
+            }}
+            onClick={() => toggleColorMode()} >
+            <Text display="none">light and dark mode toggle icon</Text>
               {colorMode == "dark" ? <FaSun /> : <FaMoon />}
             </Button>
 
