@@ -93,7 +93,6 @@ import {
               color={useColorModeValue("gray.800", "white")}
             >
               <Link href="https://mt-w10.vercel.app/">
-              <Text display="none">Home</Text>
               <FcSportsMode fontSize='2.5em'/>
               </Link>
             </Text>
