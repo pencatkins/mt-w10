@@ -24,7 +24,7 @@ const addBirthday = async ({ userId, person, birthdate, note, status }) => {
             status: status,
             createdAt: date.toString()
         });
-        setTimeout(function(){ window.location.href="/all-birthdays" }, 2000);
+        setTimeout(function(){ window.location.href="/all-birthdays" }, 1000);
     } 
     catch (err) {
         console.log(err);

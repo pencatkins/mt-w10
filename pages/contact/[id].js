@@ -54,7 +54,7 @@ const ContactItem = ({itemData, docNo}) => {
                 title: "updated!", 
                 status: "success" 
             });
-            setTimeout(function(){ window.location.href="../all-contacts" }, 2000);
+            setTimeout(function(){ window.location.href="../all-contacts" }, 1000);
         })
         .catch(error => {
             console.log(error);

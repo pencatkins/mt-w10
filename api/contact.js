@@ -23,7 +23,7 @@ const addContact = async ({ userId, name, phone, email, address}) => {
             address: address,
             enteredOn: date.toString()
         });
-        setTimeout(function(){ window.location.href="/all-contacts" }, 2000);
+        setTimeout(function(){ window.location.href="/all-contacts" }, 1000);
     } 
     catch (err) {
         console.log(err);

@@ -23,7 +23,7 @@ const addTodo = async ({ userId, title, description, status }) => {
             status: status,
             createdAt: date.toString()
         });
-        setTimeout(function(){ window.location.href="/all-todos" }, 2000);
+        setTimeout(function(){ window.location.href="/all-todos" }, 1000);
     } 
     catch (err) {
         console.log(err);

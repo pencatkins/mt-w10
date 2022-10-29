@@ -55,7 +55,7 @@ const BirthdayItem = ({itemData, docNo}) => {
                 title: "updated!", 
                 status: "success" 
             });
-            setTimeout(function(){ window.location.href="../all-birthdays" }, 2000);
+            setTimeout(function(){ window.location.href="../all-birthdays" }, 1000);
         })
         .catch(error => {
             console.log(error);

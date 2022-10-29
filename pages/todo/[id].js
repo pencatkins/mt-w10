@@ -53,7 +53,7 @@ const TodoItem = ({itemData, docNo}) => {
                 title: "updated!", 
                 status: "success" 
             });
-            setTimeout(function(){ window.location.href="../all-todos" }, 2000);
+            setTimeout(function(){ window.location.href="../all-todos" }, 1000);
         })
         .catch(error => {
             console.log(error);
